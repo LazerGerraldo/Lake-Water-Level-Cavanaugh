@@ -38,11 +38,23 @@ Field testing was a success, the Wi-Fi range of ~75ft worked. Had a hard time af
 
 The example code that I was working with clocked out after five failed WiFi connection attempts. Since this project does not take into consideration the amount of power used, nor any signal interference that may be created, an infinite loop of connection to WiFi was needed. 
 
-````
-  while(!!!client.connect(server, 80)) { // keep trying to connect to WiFi until connection is made
-    Serial.print(".");
-  }
-````
+<details>
+  <summary>WiFi Connection Loop Code Change</summary>
+    ````
+    while(!!!client.connect(server, 80)) { // keep trying to connect to WiFi until connection is made
+        Serial.print(".");
+    }
+    ````
+</details>
+ 
+ 
+The final schematic of the data logger device. 
+![electronic schematic layout](https://raw.githubusercontent.com/LazerGerraldo/Lake-Water-Level-Cavanaugh/main/Misc%20Media/final_schematic.jpg)
 
-  The final schematic of the data logger device. 
-  ![electronic schematic layout](https://raw.githubusercontent.com/LazerGerraldo/Lake-Water-Level-Cavanaugh/main/Misc%20Media/final_schematic.jpg)
+It actually took me two attempts at making a PCB, this was my first time and I did expect something like this to happen. 
+I used the given KiCad footprints and did not discover until I was wiring up that I had picked the incorrect footprint for the female pin headers. I had 2.54mm female pin headers on hand, and the PCB holes were much smaller. Not a problem, there were a few other design changes that I wished to make and it all worked out for the best. You can see in the picture below some of the changes I made to the PCB, the smaller board was the first PCB.
+
+<details>
+  <summary>PCB Comparison</summary>
+    ![blue printed circuit boards on a table](https://raw.githubusercontent.com/LazerGerraldo/Lake-Water-Level-Cavanaugh/main/Misc%20Media/PCB_compare.jpg)
+</details>
