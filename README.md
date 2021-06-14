@@ -59,6 +59,6 @@ I used the given KiCad footprints and did not discover until I was wiring up tha
 <details>
   <summary>PCB Comparison</summary>
     
-    ![blue printed circuit boards on a table](https://raw.githubusercontent.com/LazerGerraldo/Lake-Water-Level-Cavanaugh/main/Misc%20Media/PCB_compare.jpg)
+![blue printed circuit boards on a table](https://raw.githubusercontent.com/LazerGerraldo/Lake-Water-Level-Cavanaugh/main/Misc%20Media/PCB_compare.jpg)
 
 </details>
