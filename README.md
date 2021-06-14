@@ -1,4 +1,7 @@
 # Lake-Water-Level-Cavanaugh
+
+![man near electronic sensor](https://github.com/LazerGerraldo/Lake-Water-Level-Cavanaugh/Misc_Media/internal_collage.jpg)
+
 I began by seting up the DS18B20 temperature sensor with the ESP8266 shown in the TempSensor8266.ino file. 
 After gaining comfort with the ESP8266 and how it differs from an Arduino Nano or Arduino Uno I then followed [the tutorial by Random Nerd Tutorials](https://randomnerdtutorials.com/esp32-esp8266-publish-sensor-readings-to-google-sheets/)  to setup measurement recordings using Google Sheets.
 
@@ -29,4 +32,17 @@ With both major sensing components working synchronously, I moved on to outputti
 
 Moved Echo pin on the HC-SR04 from GPPIO pin 0 to 10, as pin 0 has to do with the FLASH function of the ESP8266 and that interfered with the uploading and flashing of new code. 
 
-To get the resource variable from [Webhooks](https://ifttt.com/maker_webhooks) and place the resource variable in my code. Mine was something like `"/trigger/lake_water_level/with/key/nAZjOphL3d-ZO4N3k64-1A7gTlNSrxMJdmqy3"`
+To get the resource variable from [Webhooks](https://ifttt.com/maker_webhooks) and place the resource variable in my code. Mine was something like `"/trigger/lake_water_level/with/key/nAZjOphL3d-1A7gTlNSrxMJdmqy3"`
+
+Field testing was a success, the Wi-Fi range of ~75ft worked. Had a hard time after the initial testing phase in the field with the program rebooting after power loss. I followed the [ESP8266 Pinout Reference](https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/) guide here and determined the pins I had connected sensors to were causing a fail in reboot. I was using GPIO0 and GPIO2 both of which cause boot to fail when pulled low due to their connection to the HC-SR04. To solve the booting issue, the Echo pin moved to GPIO12 and the Trig pin to GPIO14 as both of those GPIO ports were recommended by the ESP8266 Pinout Reference webpage. That solved the problem for me. 
+
+The example code that I was working with clocked out after five failed WiFi connection attempts. Since this project does not take into consideration the amount of power used, nor any signal interference that may be created, an infinite loop of connection to WiFi was needed. 
+
+````
+  while(!!!client.connect(server, 80)) { // keep trying to connect to WiFi until connection is made
+    Serial.print(".");
+  }
+````
+
+  The final schematic of the data logger device. 
+  ![electronic schematic layout](https://github.com/LazerGerraldo/Lake-Water-Level-Cavanaugh/Misc_Media/final_schematic.jpg)

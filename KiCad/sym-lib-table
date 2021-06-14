@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name ESP8266)(type Legacy)(uri ${KIPRJMOD}/ESP8266.lib)(options "")(descr ""))
+  (lib (name LakeLevel-rescue)(type Legacy)(uri ${KIPRJMOD}/LakeLevel-rescue.lib)(options "")(descr ""))
+)
