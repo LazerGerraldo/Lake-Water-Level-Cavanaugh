@@ -40,11 +40,13 @@ The example code that I was working with clocked out after five failed WiFi conn
 
 <details>
   <summary>WiFi Connection Loop Code Change</summary>
+
     ````
     while(!!!client.connect(server, 80)) { // keep trying to connect to WiFi until connection is made
         Serial.print(".");
     }
     ````
+    
 </details>
  
  
@@ -56,5 +58,7 @@ I used the given KiCad footprints and did not discover until I was wiring up tha
 
 <details>
   <summary>PCB Comparison</summary>
+    
     ![blue printed circuit boards on a table](https://raw.githubusercontent.com/LazerGerraldo/Lake-Water-Level-Cavanaugh/main/Misc%20Media/PCB_compare.jpg)
+
 </details>
