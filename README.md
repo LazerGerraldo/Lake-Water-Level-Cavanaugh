@@ -1,6 +1,6 @@
 # Lake-Water-Level-Cavanaugh
 
-![man near electronic sensor](https://github.com/LazerGerraldo/Lake-Water-Level-Cavanaugh/Misc_Media/internal_collage.jpg)
+![electronic devices mounted to small box on wall](https://raw.githubusercontent.com/LazerGerraldo/Lake-Water-Level-Cavanaugh/main/Misc%20Media/internal_collage.jpg)
 
 I began by seting up the DS18B20 temperature sensor with the ESP8266 shown in the TempSensor8266.ino file. 
 After gaining comfort with the ESP8266 and how it differs from an Arduino Nano or Arduino Uno I then followed [the tutorial by Random Nerd Tutorials](https://randomnerdtutorials.com/esp32-esp8266-publish-sensor-readings-to-google-sheets/)  to setup measurement recordings using Google Sheets.
@@ -45,4 +45,4 @@ The example code that I was working with clocked out after five failed WiFi conn
 ````
 
   The final schematic of the data logger device. 
-  ![electronic schematic layout](https://github.com/LazerGerraldo/Lake-Water-Level-Cavanaugh/Misc_Media/final_schematic.jpg)
+  ![electronic schematic layout](https://raw.githubusercontent.com/LazerGerraldo/Lake-Water-Level-Cavanaugh/main/Misc%20Media/final_schematic.jpg)
